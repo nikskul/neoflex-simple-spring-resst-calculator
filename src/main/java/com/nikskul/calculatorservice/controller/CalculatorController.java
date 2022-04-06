@@ -66,7 +66,7 @@ public class CalculatorController {
                 .mapToDouble(Double::parseDouble)
                 .reduce(Double::sum)
                 .orElseThrow(
-                        () -> new CustomArithmeticException("Ошибка при попытке сложения")
+                        () -> new CustomArithmeticException("Operation was rejected by arithmetic error in addition")
                 );
 
         CalculatorResultResponse response = new CalculatorResultResponse();
@@ -101,7 +101,7 @@ public class CalculatorController {
                 .mapToDouble(Double::parseDouble)
                 .reduce((a, b) -> a - b)
                 .orElseThrow(
-                        () -> new CustomArithmeticException("Ошибка при попытке вычитания")
+                        () -> new CustomArithmeticException("Operation was rejected by arithmetic error when subtract")
                 );
 
         CalculatorResultResponse response = new CalculatorResultResponse();
@@ -136,7 +136,7 @@ public class CalculatorController {
                 .mapToDouble(Double::parseDouble)
                 .reduce((a, b) -> a * b)
                 .orElseThrow(
-                        () -> new CustomArithmeticException("Ошибка при попытке умножения")
+                        () -> new CustomArithmeticException("Operation was rejected by arithmetic error when multiply")
                 );
 
         CalculatorResultResponse response = new CalculatorResultResponse();
@@ -171,7 +171,7 @@ public class CalculatorController {
                 .mapToDouble(Double::parseDouble)
                 .reduce((a, b) -> a / b)
                 .orElseThrow(
-                        () -> new CustomArithmeticException("Ошибка при попытке деления")
+                        () -> new CustomArithmeticException("Operation was rejected by arithmetic error when divide")
                 );
 
         CalculatorResultResponse response = new CalculatorResultResponse();
